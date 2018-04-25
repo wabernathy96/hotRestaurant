@@ -17,9 +17,8 @@ require('./public/index.js')(app);
 //     res.sendFile(path.join(__dirname, "index.html"));
 // });
 
-app.get("/tables", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/tables.html"));
-});
+require('./public/tables.js')(app);
+
 
 // -------------------------------------------- body Parser middleware
 app.use(bodyParser.urlencoded({extended: false}));
