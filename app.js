@@ -16,8 +16,11 @@ require('./public/index.js')(app);
 //     // res.send("Welcome to the Star Wars Page!")
 //     res.sendFile(path.join(__dirname, "index.html"));
 // });
+require('./public/reserve.js')(app);
+
 
 require('./public/tables.js')(app);
+
 
 
 // -------------------------------------------- body Parser middleware
