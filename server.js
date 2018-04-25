@@ -10,18 +10,6 @@ var app = express();
 //Static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-require('./public/index.js')(app);
-
-// app.get("/", function(req, res) {
-//     // res.send("Welcome to the Star Wars Page!")
-//     res.sendFile(path.join(__dirname, "index.html"));
-// });
-require('./public/reserve.js')(app);
-
-
-require('./public/tables.js')(app);
-
-
 
 // -------------------------------------------- body Parser middleware
 app.use(bodyParser.urlencoded({extended: false}));
