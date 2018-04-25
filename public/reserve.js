@@ -6,10 +6,13 @@ const mysql = require('mysql');
 // const db = require('./config/database');
 var app = express();
 
-require('./public/index.js')(app);
+
 
 module.exports.reserve = (app) => {
-    app.get('')
+    
+    app.get("/reserve",(req, res) => {
+        res.sendFile(path.join(__dirname, "../reserve.html"));
+    });
 
     app.post('/tables', (req, res) => {
 
