@@ -10,10 +10,12 @@ var app = express();
 //Static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/", function(req, res) {
-    // res.send("Welcome to the Star Wars Page!")
-    res.sendFile(path.join(__dirname, "index.html"));
-});
+require('./public/index.js')(app);
+
+// app.get("/", function(req, res) {
+//     // res.send("Welcome to the Star Wars Page!")
+//     res.sendFile(path.join(__dirname, "index.html"));
+// });
 
 app.get("/tables", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/tables.html"));
