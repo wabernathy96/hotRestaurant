@@ -10,6 +10,10 @@ var app = express();
 //Static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get("/", function(req, res) {
+    // res.send("Welcome to the Star Wars Page!")
+    res.sendFile(path.join(__dirname, "index.html"));
+});
 
 // -------------------------------------------- body Parser middleware
 app.use(bodyParser.urlencoded({extended: false}));
